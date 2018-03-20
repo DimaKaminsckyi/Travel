@@ -1,0 +1,78 @@
+.slider {
+	width: 100vm;
+	height: 450px;
+	margin: auto;
+	margin-top: 25px;
+	border: 1px solid black;
+	position: relative;
+	overflow: hidden;
+}
+
+.slide {
+	width: 500px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation-name: slid;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+	from {
+		top: 0;
+		left: 0;
+	}
+	1 { transform: translate(0px, 0px); }
+	2 { transform: translate(-500px, 0); }
+	3 { transform: translate(-500px, 300px); }
+	4 { transform: translate(500px, 300px); }
+	5 { transform: translate(500px, 0); }
+	to  { transform: (0px, 0px);  }
+}
+
+@keyframes slide {
+ from {
+  top: 0;
+  left: 0;
+ }
+ 12.5% {
+  transform: translate(0px, 0px);
+ }
+ 25% {
+  transform: translate(-500px, 0);
+ }
+ 36% {
+  transform: translate(-500px, 300px);
+ }
+ 37% {
+  transform: translate(500px, 300px);
+ }
+ 87.5% {
+  transform: translate(500px, 0);
+  
+ }
+ to {
+  transform: (0px, 0px);
+ }
+}
+
+
+.slide1 { 
+ background: url(/img/45V0rzysWuk.jpg);
+ animation-delay: 7.5s;
+}
+.slide2 { 
+ background: url(/img/plyazh-s-volnami.jpg);
+ animation-delay: 5s;
+}
+.slide3 { 
+ background: url(3.jpg);
+ animation-delay: 2.5s;
+}
+.slide4 { 
+ background: url(4.jpg);
+ animation-delay: 0s;
+}

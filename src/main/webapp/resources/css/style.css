@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+body {
+	height: 100%;
+	text-align: center;
+	background: #fff;
+	overflow-x: hidden;
+}
+
+#app {
+	text-align: left;
+
+}
+
+
+#header {
+	width: 100%;
+
+}
+
+.logo {
+	height: 83px;
+	width: 100%;
+}
+
+.logo h1 {
+	font-family: 'Pacifico', cursive;
+	color: #feb386;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 50px;
+}
+
+
+.menu-main {
+	list-style: none;
+	margin: 10px 0 5px;
+	padding: 25px 0 5px;
+	text-align: center;
+	background: white;
+}
+
+.menu-main li {
+	display: inline-block;
+}
+
+.menu-main li:after {
+	content: "|";
+	color: #606060;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+	content: none;
+}
+
+.menu-main a {
+	text-decoration: none;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	letter-spacing: 2px;
+	position: relative;
+	padding-bottom: 20px;
+	margin: 0 34px 0 30px;
+	font-size: 17px;
+	text-transform: uppercase;
+	display: inline-block;
+	transition: color .2s;
+}
+
+.menu-main a,
+.menu-main a:visited {
+	color: #9d999d;
+}
+
+.menu-main a.current,
+.menu-main a:hover {
+	color: #feb386;
+}
+
+.menu-main a:before,
+.menu-main a:after {
+	content: "";
+	position: absolute;
+	height: 4px;
+	top: auto;
+	right: 50%;
+	bottom: -5px;
+	left: 50%;
+	background: #feb386;
+	transition: .8s;
+}
+
+.menu-main a:hover:before,
+.menu-main .current:before {
+	left: 0;
+}
+
+.menu-main a:hover:after,
+.menu-main .current:after {
+	right: 0;
+}
+
+@media (max-width: 550px) {
+	.menu-main {
+		padding-top: 0;
+	}
+	.menu-main li {
+		display: block;
+	}
+	.menu-main li:after {
+		content: none;
+	}
+	.menu-main a {
+		padding: 25px 0 20px;
+		margin: 0 30px;
+	}
+}
+
+.img-header {
+	height: 500px;
+	background-image: url(../img/plyazh-s-volnami1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	
+}
+
+
+.img-header p {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	padding-top: 210px;
+	padding-bottom: 30px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+}
+.img-header a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 55% 10px 45%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 600;
+  color: #524f4e;
+	text-transform: uppercase;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: .3s;
+	opacity: .7;
+}
+.img-header a:hover {
+  background: #ff944d;
+  box-shadow: 0 15px 20px rgba(244, 146, 66,.4);
+  color: white;
+  transform: translateY(-7px);
+	opacity: 1;
+}
+
+#info {
+	width: 100%;
+	height: 400px;
+	margin-left: 7%;
+	margin-right: 7%;
+	display: flex;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+#about {
+	padding-top: 40px;
+	padding-left: 3%;
+	width: 50%;
+}
+
+#about h2 {
+	color: #feb386;
+	margin-bottom: 20px;
+}
+
+#about h4 {
+	margin-bottom: 20px;
+	color: #002540;
+	font-weight: bold;
+	line-height: 1.6;
+}
+
+#about p {
+	color: #395b73;
+	line-height: 1.5;
+	font-size: 14px;
+}
+
+#about-img {
+	width: 50%;
+}
+
+#about-img img {
+	padding: 20px 0 0 7%;
+	width: 60%;
+}
+
+#footer {
+	color: white;
+	padding: 20px 7% 20px 7%;
+	display: flex;
+	justify-content: flex-start;
+	height: 100px;
+	width: 100%;
+	background-color: #ff944d;
+}
+
+.logo-footer {
+	height: 83px;
+	width: 100%;
+}
+
+.logo-footer h1 {
+	font-family: 'Pacifico', cursive;
+	color: white;
+	padding-top: 20px;
+	font-size: 50px;
+}
+
+.pagination li a {
+	color: #ff944d;
+}
+
+.pagination.disabled li a {color: #ff944d;}
+
+h1 a{
+	color: #feb386;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	color: #feb386;
+	text-decoration: none;
+}
