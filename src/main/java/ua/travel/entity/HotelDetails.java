@@ -14,6 +14,9 @@ public class HotelDetails extends BaseEntity {
 
     @Column(name = "category")
     private int category;
+    
+    @Column(name = "about_hotel")
+    private String aboutHotel;
 
     @OneToOne(mappedBy = "hotelDetails")
     private Hotel hotel;
@@ -21,9 +24,10 @@ public class HotelDetails extends BaseEntity {
     public HotelDetails() {
     }
 
-    public HotelDetails(int numberOfRooms, int category) {
+    public HotelDetails(int numberOfRooms, int category , String aboutHotel) {
         this.numberOfRooms = numberOfRooms;
         this.category = category;
+        this.aboutHotel = aboutHotel;
     }
 
     public int getNumberOfRooms() {
@@ -49,4 +53,14 @@ public class HotelDetails extends BaseEntity {
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
     }
+
+	public String getAboutHotel() {
+		return aboutHotel;
+	}
+
+	public void setAboutHotel(String aboutHotel) {
+		this.aboutHotel = aboutHotel;
+	}
+    
+    
 }

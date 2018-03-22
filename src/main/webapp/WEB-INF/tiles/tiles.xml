@@ -21,5 +21,8 @@
 		<put-attribute name="title" value="Page title" />
 		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
 	</definition>
+	
+	<!-- Custom error page -->
+	<definition name="error" template="/WEB-INF/views/404.jsp" />
 
 </tiles-definitions>

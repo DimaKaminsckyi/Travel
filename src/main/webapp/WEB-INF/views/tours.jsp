@@ -55,13 +55,13 @@
 					<div class="col-sm-4">
 						<div class="product">
 							<div class="product-img">
-								<a href="${pageContext.request.contextPath}/tour-info/${tours.id}"><img src="${pageContext.request.contextPath}/resources/img/plyazh-s-volnami1.jpg" alt="img"></a>
+								<a href="${pageContext.request.contextPath}/${tours.id}/tour-info"><img src="${pageContext.request.contextPath}/resources/img/plyazh-s-volnami1.jpg" alt="img"></a>
 							</div>
 							<p class="product-title">
-								<a href="${pageContext.request.contextPath}/tour-info/${tours.id}">${tours.title}</a>
+								<a href="${pageContext.request.contextPath}/${tours.id}/tour-info">${tours.title}</a>
 							</p>
 							<p class="product-desc">${tours.description}</p>
-							<p class="product-price">Price: € ${tours.price}</p>
+							<p class="product-price">Price: $ ${tours.price}</p>
 						</div>
 					</div>
 			</div>

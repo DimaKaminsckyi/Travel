@@ -241,7 +241,7 @@ body {
 	color: #ff944d;
 }
 
-.pagination.disabled li a {color: #ff944d;}
+.disabled li a {color: #ff944d;}
 
 h1 a{
 	color: #feb386;

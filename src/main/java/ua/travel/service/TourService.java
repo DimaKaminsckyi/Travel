@@ -10,6 +10,8 @@ public interface TourService {
 	
 	void saveTour(Tour tour);
 	
+	Tour findTourById(int id);
+	
 	List<Tour> findAllTours();
 	
 	Page<Tour> getPagebleTour(int pageNumber,

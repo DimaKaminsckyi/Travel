@@ -30,7 +30,6 @@ public class TourController {
 		model.addAttribute("endIndex", end);
 		model.addAttribute("currentIndex", currentPage);
 		model.addAttribute("tourListByPageSize", page.getContent());
-		//model.addAttribute("tourListByPageSize", tourService.findAllTours() );
 		return "tours";
 	}
 

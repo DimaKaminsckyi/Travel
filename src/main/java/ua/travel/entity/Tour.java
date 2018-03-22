@@ -15,6 +15,10 @@ public class Tour extends BaseEntity {
 
     @Column(name = "price")
     private BigDecimal price;
+    
+    @OneToOne
+    @JoinColumn(name = "tour_details_id")
+    private TourDetails tourDetails;
 
     @OneToOne
     @JoinColumn(name = "hotel_id")

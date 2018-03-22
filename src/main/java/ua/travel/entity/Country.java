@@ -20,8 +20,6 @@ public class Country extends BaseEntity {
     @OneToMany(mappedBy = "country")
     private List<Hotel> hotels = new ArrayList<>();
 
-    @OneToMany(mappedBy = "country")
-    private List<City> cities = new ArrayList<>();
 
     public Country() {
     }

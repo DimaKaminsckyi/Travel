@@ -32,6 +32,11 @@ public class TourServiceImpl implements TourService {
 		PageRequest request = new PageRequest(pageNumber - 1, pageSize, Sort.Direction.ASC, "id");
 		return tourRepository.findAll(request);
 	}
+
+	@Override
+	public Tour findTourById(int id) {
+		return tourRepository.findOne(id);
+	}
 	
 	
 

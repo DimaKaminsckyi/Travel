@@ -19,10 +19,6 @@ public class Hotel extends BaseEntity {
     @JoinColumn(name = "id_country")
     private Country country;
 
-    @ManyToOne
-    @JoinColumn(name = "id_city")
-    private City city;
-
     @OneToOne(mappedBy = "hotel")
     private Tour tour;
 
@@ -52,14 +48,6 @@ public class Hotel extends BaseEntity {
 
     public void setCountry(Country country) {
         this.country = country;
-    }
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
     }
 
     public HotelDetails getHotelDetails() {
