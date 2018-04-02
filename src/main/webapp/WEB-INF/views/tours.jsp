@@ -5,22 +5,28 @@
 	<link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet">
 	
 	
-	<c:url var="firstUrl" value="${pageContext.request.contextPath}/tours/1?field=${sortByField}&sort=${sortDirection}&total=${totalPerPage}" />
-	<c:url var="lastUrl" value="${pageContext.request.contextPath}/tours/${coursesList.totalPages}?field=${sortByField}&sort=${sortDirection}&total=${totalPerPage}" />
+	
 	<c:url var="prevUrl" value="${pageContext.request.contextPath}/tours/${currentIndex - 1}?field=${sortByField}&sort=${sortDirection}&total=${totalPerPage}" />
 	<c:url var="nextUrl" value="${pageContext.request.contextPath}/tours/${currentIndex + 1}?field=${sortByField}&sort=${sortDirection}&total=${totalPerPage}" />
+	
+	
+	<style>
+		#footer{
+			height: 135px;
+		}
+	</style>
 	
 	<div class="container">
 	
 		<ul class="pagination">
 			<c:choose>
 				<c:when test="${currentIndex == 1}">
-					<li class="disabled"><a href="#">&lt;&lt;</a></li>
-					<li class="disabled"><a href="#">&lt;</a></li>
-					<li class="disabled"><a href="${firstUrl}">1</a></li>
+
+					<li class="disabled"><a style="color: #ff944d;" href="#">&lt;</a></li>
+					<li class="disabled"><a style="color: #ff944d;" href="${firstUrl}">1</a></li>
 				</c:when>
 				<c:otherwise>
-					<li><a href="${firstUrl}">&lt;&lt;</a></li>
+
 					<li><a href="${prevUrl}">&lt;</a></li>
 				</c:otherwise>
 			</c:choose>
@@ -39,11 +45,11 @@
 			<c:choose>
 				<c:when test="${currentIndex == coursesList.totalPages}">
 					<li class="disabled"><a href="#">&gt;</a></li>
-					<li class="disabled"><a href="#">&gt;&gt;</a></li>
+
 				</c:when>
 				<c:otherwise>
 					<li><a href="${nextUrl}">&gt;</a></li>
-					<li><a href="${lastUrl}">&gt;&gt;</a></li>
+
 				</c:otherwise>
 			</c:choose>
 		</ul>
@@ -54,14 +60,15 @@
 			<div class="products">
 					<div class="col-sm-4">
 						<div class="product">
+						
 							<div class="product-img">
-								<a href="${pageContext.request.contextPath}/${tours.id}/tour-info"><img src="${pageContext.request.contextPath}/resources/img/plyazh-s-volnami1.jpg" alt="img"></a>
+								<a href="${pageContext.request.contextPath}/${tours.id}/tour-info"><img style="border-radius: 10px;" src="data:image/png; base64, ${tours.imagePath}" alt="img"></a>
 							</div>
 							<p class="product-title">
 								<a href="${pageContext.request.contextPath}/${tours.id}/tour-info">${tours.title}</a>
 							</p>
 							<p class="product-desc">${tours.description}</p>
-							<p class="product-price">Price: $ ${tours.price}</p>
+							<p class="product-price">Ціна: $ ${tours.price}</p>
 						</div>
 					</div>
 			</div>

@@ -1,5 +1,6 @@
 package ua.travel.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -14,10 +15,10 @@ public class Country extends BaseEntity {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "country")
+    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL)
     private List<Tour> tours = new ArrayList<>();
 
-    @OneToMany(mappedBy = "country")
+    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL)
     private List<Hotel> hotels = new ArrayList<>();
 
 
@@ -51,4 +52,5 @@ public class Country extends BaseEntity {
     public void setHotels(List<Hotel> hotels) {
         this.hotels = hotels;
     }
+
 }

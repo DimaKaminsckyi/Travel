@@ -4,35 +4,41 @@
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/tour-info.css" rel="stylesheet">
 
-	<div id="primary" class="content-area col-lg-9">
-		<div class="featured_card">
+<style>
+	#footer{
+		height: 135px;
+	}
+</style>
 
+	<div id="primary" class="content-area col-lg-9">
+	
+		<div class="featured_card">
 			<div class="tour-about">
 				<div class="row">
-					<div class="col-sm-6"><img src="${pageContext.request.contextPath}/resources/img/plyazh-s-volnami1.jpg" alt="img"></div>
+					<div class="col-sm-6"><img src="data:image/png; base64, ${imgTour}"" alt="img"></div>
 					<div class="col-sm-6">
-						<h1 class="entry-title">Perfection tour for you honey and your friends</h1>
+						<h1 class="entry-title">${tour.title}</h1>
 						<table class="featured_options">
 							<tbody>
 								<tr>
 									<th>Країна</th>
-									<th>Італія</th>
+									<th>${tour.country.name}</th>
 								</tr>
 								<tr>
 									<th>Ціна</th>
-									<th>500</th>
+									<th>${tour.price}</th>
 								</tr>
 								<tr>
 									<th>Виїзд з</th>
-									<th>Львів</th>
+									<th>${tour.tourDetails.departureFromTheCity }</th>
 								</tr>
 								<tr>
 									<th>Готель</th>
-									<th> LA PERLA PREZIOSA HOTEL</th>
+									<th>${tour.hotel.title} </th>
 								</tr>
 								<tr>
 									<th>Кількість зірок</th>
-									<th>4</th>
+									<th>${tour.hotel.hotelDetails.category}</th>
 								</tr>
 
 							</tbody>
@@ -43,21 +49,20 @@
 			<br>
 			<div class="booking-content">
 			
-				<h3><strong style="color: #ff944d;">LA PERLA PREZIOSA HOTEL</strong></h3>
+				<h3><strong style="color: #ff944d;">${tour.hotel.title}</strong></h3>
 				
 				<table>
 					<tr>
 						<th>Кількість ночей</th>
-						<th>7</th>
+						<th>${tour.tourDetails.dayInTour }</th>
 					</tr>
 					<tr>
 						<th>Харчування</th>
-						<th>AI</th>
+						<th>${tour.tourDetails.grubby }</th>
 					</tr>
 				</table>
 				
-				<p>Готель розташований на набережній курорту Гроттаммаре, всього в декількох кроках від приватного пляжу, в оточенні барів, ресторанів і магазинів. Центр міста знаходиться в 400 метрах від готелю. До нього можна дістатися на автобусі, який зупиняється в 20 метрах від готелю. Італію не дарма називають країною-музеєм, адже саме тут зосереджені три чверті культурного надбання Європи. Але Італія не лише музеї та пам’ятки, а безліч областей і міст з живою культурою, яскравою історією та унікальними традиціями. Кожен з них по праву вважає себе особливим і пишається цим.</p>
-
+				<p>${tour.hotel.hotelDetails.aboutHotel }</p>
 			</div>
 		</div>
 	</div>

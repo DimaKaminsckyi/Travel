@@ -1,5 +1,6 @@
 package ua.travel.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -15,14 +16,14 @@ public class Hotel extends BaseEntity {
     @Column(name = "title")
     private String title;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_country")
     private Country country;
 
-    @OneToOne(mappedBy = "hotel")
+    @OneToOne(mappedBy = "hotel", cascade = CascadeType.ALL)
     private Tour tour;
 
-    @OneToOne
+    @OneToOne( cascade = CascadeType.ALL)
     @JoinColumn(name = "hotel_details_id")
     private HotelDetails hotelDetails;
 

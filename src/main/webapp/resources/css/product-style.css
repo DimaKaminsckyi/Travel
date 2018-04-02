@@ -20,6 +20,7 @@ img {
 	box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
 }
 .product-img {
+	margin-bottom: 15px;
 	height: 200px;
 }
 .product-title a {

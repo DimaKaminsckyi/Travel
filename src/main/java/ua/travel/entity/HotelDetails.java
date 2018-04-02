@@ -1,7 +1,9 @@
 package ua.travel.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -14,11 +16,12 @@ public class HotelDetails extends BaseEntity {
 
     @Column(name = "category")
     private int category;
-    
-    @Column(name = "about_hotel")
+   
+    @Lob
+    @Column(name = "about_hotel",  length = 100000 )
     private String aboutHotel;
 
-    @OneToOne(mappedBy = "hotelDetails")
+    @OneToOne(mappedBy = "hotelDetails",  cascade = CascadeType.ALL)
     private Hotel hotel;
 
     public HotelDetails() {

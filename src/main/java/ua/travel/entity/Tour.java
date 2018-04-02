@@ -16,26 +16,30 @@ public class Tour extends BaseEntity {
     @Column(name = "price")
     private BigDecimal price;
     
-    @OneToOne
+    @Column(name = "image_path")
+	private String imagePath;
+    
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "tour_details_id")
     private TourDetails tourDetails;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_country")
     private Country country;
 
     public Tour() {
     }
 
-    public Tour(String title, String description, BigDecimal price) {
+    public Tour(String title, String description, BigDecimal price, String imagePath) {
         this.title = title;
         this.description = description;
         this.price = price;
+        this.imagePath = imagePath;
     }
 
     public String getTitle() {
@@ -78,6 +82,24 @@ public class Tour extends BaseEntity {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+
+	public TourDetails getTourDetails() {
+		return tourDetails;
+	}
+
+	public void setTourDetails(TourDetails tourDetails) {
+		this.tourDetails = tourDetails;
+	}
     
+	
+	
     
 }

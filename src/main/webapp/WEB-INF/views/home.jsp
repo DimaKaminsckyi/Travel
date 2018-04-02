@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 			<div class="img-header">
-				<p>Порівнюйте відразу сотні туристичних сайтів. Швидше знаходьте кращі пропозиції.
+				<p>Швидше знаходьте кращі пропозиції.
 				</p>
 				<a href="${pageContext.request.contextPath}/tours/1">Розпочни пошук</a>
 			</div>
