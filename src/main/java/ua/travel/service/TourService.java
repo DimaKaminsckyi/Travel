@@ -12,6 +12,10 @@ public interface TourService {
 	
 	Tour findTourById(int id);
 	
+	void editUser(Tour tour);
+	
+	void deleteTour(int tourId);
+	
 	List<Tour> findAllTours();
 	
 	Page<Tour> getPagebleTour(int pageNumber,

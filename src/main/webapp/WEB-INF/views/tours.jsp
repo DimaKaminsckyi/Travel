@@ -18,7 +18,7 @@
 	
 	<div class="container">
 	
-		<ul class="pagination">
+		<ul class="pagination" style="margin-left: 2.8%;">
 			<c:choose>
 				<c:when test="${currentIndex == 1}">
 
@@ -43,7 +43,7 @@
 			</c:forEach>
 
 			<c:choose>
-				<c:when test="${currentIndex == coursesList.totalPages}">
+				<c:when test="${currentIndex == tourList.totalPages}">
 					<li class="disabled"><a href="#">&gt;</a></li>
 
 				</c:when>
@@ -53,6 +53,26 @@
 				</c:otherwise>
 			</c:choose>
 		</ul>
+		
+<%-- 		<form method="get" class="form-inline">
+			<div class="form-group">
+				<label class="sr-only" for="sortByField">Sort By Field</label> 
+				<select class="form-control" id="sortByField" name = "field">
+					<option value="${sortByField}">${sortByField}</option>
+					<option value="id">Id</option>
+					<option value="price">Ціна</option>
+				</select>
+				
+				<label class="sr-only" for="sortBy">Sort By</label> 
+				<select class="form-control" id="sortBy" name = "sort">
+					<option value="${sortDirection}">${sortDirection}</option>
+					<option value="asc">ASC</option>
+					<option value="desc">DESC</option>
+				</select>
+				
+				<input type="submit" value="Sort" class="btn btn-primary">
+			</div>
+		</form> --%>
 		
 
 <div class="container">

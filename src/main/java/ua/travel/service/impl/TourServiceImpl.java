@@ -37,6 +37,18 @@ public class TourServiceImpl implements TourService {
 	public Tour findTourById(int id) {
 		return tourRepository.findOne(id);
 	}
+
+	@Override
+	public void editUser(Tour tour) {
+		// TODO Auto-generated method stub
+		tourRepository.save(tour);
+	}
+
+	@Override
+	public void deleteTour(int tourId) {
+		// TODO Auto-generated method stub
+		tourRepository.delete(tourId);
+	}
 	
 	
 

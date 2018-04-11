@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans');
+
+.tour-about{
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+.featured_card {
+	margin: 0 0 0 20% ;
+	padding-bottom: 25px;
+}
+
+.featured_card img {
+    width: auto;
+    height: auto;
+    max-width: 100% !important;
+}
+
+.col-sm-6 img{
+	margin: 20px 0 0 0;
+	border-radius: 10px;
+}
+
+.featured_card .featured_options th {
+    text-align: left;
+    font-weight: normal;
+	padding: 10px 15px;
+}
+
+.booking-content p {
+	font-family: 'Didact Gothic';
+	line-height: 1.8;
+}
+
+.booking-content th {
+    text-align: left;
+    font-weight: normal;
+	padding: 3px 5px;
+}
